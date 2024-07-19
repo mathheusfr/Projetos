@@ -1,0 +1,54 @@
+<html>
+     <link rel="stylesheet" href="/public/style.css">
+     <div class="container-logado">
+    
+   <div class="header-panel">
+        <h1>Logado</h1>
+   </div>
+
+
+   
+   <form method="post" action="/admin/cadastro">
+          <p>Digite o titulo da noticia</p> 
+          <input type="text" name="titulo_noticia" placeholder="Titulo da noticia">
+          <br> <br>
+
+          <p>Escolha a imagem</p> 
+          <input type="text" name="url_imagem" placeholder="link da imagem">
+          <br><br>
+
+          <p>Escolha a categoria</p>
+          <textarea name="categoria" placeholder="categoria..."></textarea>
+          <br><br>
+
+          <p>Digite a sua noticia</p>
+          <textarea name="noticia" placeholder="Noticia..."></textarea>
+          <br><br>
+
+          <p>Digite a slug da noticia</p>
+          <input type="text" name="slug" placeholder="Slug da noticia">
+          <br><br>
+
+        <input type="submit" name="acao" value="Cadastrar!" />
+    </form>
+    
+    <h1 style="text-align: center;">Lista de noticias</h1> 
+    <br>
+    <div class="center">
+    <% for (let i = 0; i < Math.min(4, posts.length); i++) { %>
+          <div class="box-ultima-single">
+          <img src="<%= posts[i].imagem %>" />
+          <div class="conteudo-noticia-single">
+               <h3><%= posts[i].categoria %></h3>
+               <h2><%= posts[i].titulo %></h2>
+               <p><%- posts[i].descricaoCurta %>...</p>
+               <a href="/admin/deletar/<%= posts[i].id %>">X</a>
+          </div>
+          </div>
+     <% } %>
+          <a href="/admin/deletar/10">(x)</a>
+      </div>
+     </div>
+
+     
+</html>

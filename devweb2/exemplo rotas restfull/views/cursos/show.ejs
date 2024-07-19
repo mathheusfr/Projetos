@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes de um Curso</title>
+</head>
+<body>
+    <h2>Detalhes de um Cursos:</h2>
+    <% if (curso) {%>
+        <p>Sigla: <b><%=curso.sigla%></b></p>
+        <p>Nome: <b><%=curso.nome%></b></p>
+    <% } else { %>
+        <p>Não foi encontrado nenhum curso com essa sigla.</p>
+    <% } %>
+    <br/>
+    <a href="/cursos/<%=curso.sigla%>/edit"><button>Alterar</button></a>
+    <br/><br/>
+    <form action="/cursos/<%=curso.sigla%>?_method=DELETE" method='post'>
+        <button>Apagar</button>
+    </form>
+    <br/><br/>
+    <a href="/cursos"><button>Voltar</button></a>
+</body>
+</html>

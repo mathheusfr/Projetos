@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes</title>
+</head>
+<body>
+    <h2>Detalhes de um Curso:</h2>
+    <p>Sigla: <strong><%= curso.sigla %></strong></p>
+    <p>Nome: <strong><%= curso.nome %></strong></p>
+    <br>
+    <a href="/curso/<%= curso.id %>/edit"><button>Alterar</button></a>
+    <br><br>
+    <form action="/curso/<%= curso.id %>?_method=DELETE" method="post">
+        <button>Apagar</button>
+    </form>
+    <br>
+    <a href="/curso"><button>Voltar</button></a>
+</body>
+</html>

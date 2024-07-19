@@ -1,0 +1,31 @@
+
+
+<%- include('partials/header.ejs') %>
+
+<section class="outras-noticias">
+    <div class="title-outras-noticia">
+        <h2>Últimas Notícias</h2>
+        <br><br>
+        <div class="center">
+            <% for(let i = 1; i < posts.length; i++) { %>
+            <div style="width: 100%;" class="mais-lidas">
+                <h3>Mais Lidas</h3>
+                <div class="mais-lidas-noticias">
+                    <div class="mais-lida-noticia-single">
+                        <img src=" <%= posts[i].imagem  %>" />
+                        <div class="texto-mais-lida-single">
+                            <h4><%= posts[i].titulo %></h4>
+                            <p>Estatísticas do Grêmio em 2023: campanha, artilheiros e vídeos
+                            Veja os números do Tricolor na temporada nesta página</p>
+                            <a href="/encarar-o-surf">Saiba mais</a>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+            <% } %>
+        </div>
+    </div>
+
+  
+    <%- include('partials/footer.ejs') %>
+</section>

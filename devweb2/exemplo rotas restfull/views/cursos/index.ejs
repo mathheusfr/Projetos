@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Cursos</title>
+</head>
+<body>
+    <h2>Lista de Cursos do Campus Osório:</h2>
+    <ul>
+        <% for (curso of cursos) { %>
+            <li><a href="/cursos/<%=curso.sigla%>"><%=curso.sigla%></a></li>
+        <% } %>
+    </ul>
+    <a href="/cursos/new"><button>Adicionar novo curso</button></a>
+</body>
+</html>

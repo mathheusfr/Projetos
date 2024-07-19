@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar</title>
+</head>
+<body>
+    <h2>Alterar um Curso:</h2>
+    <form action="/curso/<%= curso.id %>?_method=PATCH" method="post">
+        <label for="sigla">Sigla:</label>
+        <input type="text" name="sigla" id="sigla" value="<%= curso.sigla %>">
+        <br><br>
+        <label for="sigla">Nome:</label>
+        <input type="text" name="nome" id="nome" value="<%= curso.nome %>">
+        <br><br>
+        <button>Alterar</button>
+    </form>
+    <br>
+    <a href="/curso/<%= curso.id %>"><button>Voltar</button></a>
+</body>
+</html>
