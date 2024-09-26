@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+.clear {
+    clear: both;
+}
+
+header {
+    background: #F7F7F7;
+    color: black;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para o cabeçalho */
+}
+
+.logo {
+    padding: 10px 0;
+    float: left;
+}
+
+.logo a {
+    font-size: 22px; /* Aumentar o tamanho da fonte do logo */
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+}
+
+nav.desktop {
+    float: right;
+}
+
+nav.desktop li {
+    font-weight: 300;
+    display: inline-block;
+    padding-right: 20px;
+    font-size: 19px;
+}
+
+nav.desktop a {
+    display: inline-block;
+    font-weight: 300;
+    padding: 13px 15px;
+    color: black; /* Alterado para o texto ser mais visível */
+    text-decoration: none;
+    transition: color 0.3s; /* Transição suave na cor do texto */
+}
+
+nav.desktop a:hover {
+    color: #2196f3; /* Cor ao passar o mouse sobre os links */
+}
+
+.chamada-escolher {
+    text-align: center;
+    background: #b0c3d3;
+    padding: 15px 0;
+    margin-bottom: 50px;
+    color: white;
+    font-size: 22px; /* Aumentar o tamanho da fonte do logo */
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+}
+
+.chamada-escolher h2 {
+    font-size: 28px; /* Aumentar o tamanho da fonte */
+    color: white;
+    font-weight: 300;
+    font-size: 22px; /* Aumentar o tamanho da fonte do logo */
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+}
+
+.lista-items {
+    padding: 10px 20 90px 100px;
+}
+
+.container {
+    overflow: hidden; /* Para garantir que os itens flutuantes sejam contidos */
+}
+
+.produto-single-box {
+    float: left;
+    width: 30%; /* Largura fixa para todas as caixas */
+    height: 400px; /* Altura fixa para uniformizar as caixas */
+    text-align: center;
+    margin: 0 1.5% 20px 1.5%; /* Espaçamento entre os produtos */
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    box-sizing: border-box; /* Inclui padding dentro do tamanho total da caixa */
+}
+
+.produto-single-box img {
+    width: 100%;
+    max-height: 250px; /* Limitar a altura máxima da imagem */
+    object-fit: cover; /* Garante que a imagem seja cortada e preenchida corretamente */
+    border-radius: 8px; /* Bordas arredondadas */
+}
+
+.produto-single-box p {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+    color: #4b4b4b;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.produto-single-box a {
+    color: white;
+    display: inline-block;
+    background: #2196f3;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+/*******************************/ 
+/* Estilos gerais da tabela de pedidos */
+.tabela-pedidos {
+    margin-top: 40px;
+    background-color: #fff; /* Fundo branco, claro e limpo */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.tabela-pedidos h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
+.tabela-pedidos table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabela-pedidos tr {
+    border-bottom: 1px solid #eaeaea; /* Separadores entre os itens */
+}
+
+.tabela-pedidos tr:last-child {
+    border-bottom: none;
+}
+
+.tabela-pedidos td {
+    padding: 20px 10px;
+    color: #555;
+    text-align: left;
+    vertical-align: middle;
+    font-size: 16px;
+}
+
+.tabela-pedidos img {
+    width: 60px;
+    height: auto;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+
+.tabela-pedidos .produto-detalhes {
+    display: flex;
+    align-items: center;
+}
+
+.tabela-pedidos .produto-nome {
+    font-weight: bold;
+    color: #333;
+    font-size: 18px;
+}
+
+.tabela-pedidos .produto-descricao {
+    color: #888;
+    font-size: 14px;
+}
+
+.tabela-pedidos .quantidade, .tabela-pedidos .cor {
+    font-size: 14px;
+    color: #333;
+}
+
+.tabela-pedidos input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.tabela-pedidos .cor-selecionada {
+    background-color: #f7f7f7;
+    border: 1px solid #eaeaea;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.tabela-pedidos .preco {
+    font-weight: bold;
+    color: #000;
+    font-size: 18px;
+}
+
+
+
+/* Estilos da área de finalização */
+.finalizar-pedido {
+    margin-top: 40px;
+    text-align: right;
+}
+
+.finalizar-pedido h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.btn-pagamento {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #000;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.btn-pagamento:hover {
+    background-color: #333;
+}
+
+.btn-continuar {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #333;
+    font-size: 16px;
+    text-decoration: none;
+    border-bottom: 1px solid #333;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.btn-continuar:hover {
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+
+.btn-excluir{
+    text-decoration: none;
+    color: black;
+}
+
+.clear {
+    clear: both;
+}
+
+
+/* ***************************************** */ 
+
+
+
+footer {
+    left: 0;
+    right: 0;
+    height: 60px; /* Altura do footer */
+    padding: 20px 0;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background: #F7F7F7;
+
+}
+
+footer.footer-finalizar {
+    position: absolute; /* Fixa o footer na parte inferior */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px; /* Altura do footer */
+    padding: 20px 0;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background: #F7F7F7;
+
+}
+
+
