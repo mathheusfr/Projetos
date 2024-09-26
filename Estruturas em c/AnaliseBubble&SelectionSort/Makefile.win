@@ -1,0 +1,46 @@
+# Project: analise_dados_v3
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o functions.o bubblesort.o dataset.o selectionsort.o binarysearch.o linearsearch.o
+LINKOBJ  = main.o functions.o bubblesort.o dataset.o selectionsort.o binarysearch.o linearsearch.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -Wl,--stack,99999999
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = analise_dados_v3.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+functions.o: functions.c
+	$(CC) -c functions.c -o functions.o $(CFLAGS)
+
+bubblesort.o: bubblesort.c
+	$(CC) -c bubblesort.c -o bubblesort.o $(CFLAGS)
+
+dataset.o: dataset.c
+	$(CC) -c dataset.c -o dataset.o $(CFLAGS)
+
+selectionsort.o: selectionsort.c
+	$(CC) -c selectionsort.c -o selectionsort.o $(CFLAGS)
+
+binarysearch.o: binarysearch.c
+	$(CC) -c binarysearch.c -o binarysearch.o $(CFLAGS)
+
+linearsearch.o: linearsearch.c
+	$(CC) -c linearsearch.c -o linearsearch.o $(CFLAGS)
