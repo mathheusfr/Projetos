@@ -1,0 +1,4 @@
+login do painel
+
+user: admin
+password: admin
